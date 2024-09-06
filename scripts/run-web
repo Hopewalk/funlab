@@ -1,0 +1,4 @@
+#!/bin/sh
+
+DEBUG=true poetry run  funlab-web -H 0.0.0.0 -d
+# DEBUG=true poetry run python ./funlab/cmd/web.py -H 0.0.0.0 -d
