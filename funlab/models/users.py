@@ -7,8 +7,8 @@ class User(me.Document, UserMixin):
    meta = {"collection": "users"}
 
 
-   first_name = me.StringField(required=True, max_length=128)
-   last_name = me.StringField(required=True, max_length=128)
+   first_name = me.StringField(max_length=128)
+   last_name = me.StringField(max_length=128)
 
 
    username = me.StringField(required=True, unique=True, max_length=64)
