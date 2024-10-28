@@ -48,7 +48,7 @@ class User(me.Document, UserMixin):
 
 
    def get_fullname(self):
-       return f"{self.first_name} {self.last_name}"
+       return f"{self.username} {self.username}"
 
 
    def has_roles(self, *roles):

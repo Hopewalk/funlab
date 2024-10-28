@@ -19,7 +19,8 @@ class Course(me.Document):
     status = me.StringField(default="pending", choices=COURSE_STATUS)
 
     creator = me.ReferenceField("User", dbref=True)
-    update = me.ReferenceField("User", dbref=True)
+    updater = me.ReferenceField("User", dbref=True)
 
     created_date = me.DateTimeField(required=True, default = datetime.datetime.now)
-    update_date = me.DateTimeField(required=True, default = datetime.datetime.now)
+    updated_date = me.DateTimeField(required=True, default = datetime.datetime.now)
+    

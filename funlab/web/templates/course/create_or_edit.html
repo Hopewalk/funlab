@@ -1,0 +1,52 @@
+{% extends "/base/default-page.html" %}
+
+{% block content %}
+<div class="ui container">
+    <h1> Create or Edit </h1>
+
+    <form method="POST" class="ui form">
+        {{ form.csrf_token }}
+
+        <div class="field">
+            <label>
+                {{ form.name.label }}
+            </label>
+            {{ form.name }}
+        </div>
+
+        <div class="field">
+            <label>
+                {{ form.description.label }}
+            </label>
+            {{ form.description }}
+        </div>
+
+        <div class="field">
+            <label>
+                {{ form.professors.label }}
+            </label>
+            {{ form.professors }}
+
+        </div>
+
+        <div class="field">
+            <label>
+                {{ form.code.label }}
+            </label>
+            {{ form.code }}
+        </div>
+
+        <div class="field">
+            <label>
+                {{ form.enrollment.label }}
+            </label>
+            {{ form.enrollment }}
+        </div> 
+        <div class="ui grid" style="margin-top: 1rem;">
+            <div>
+                <button type="submit" class="ui prtmary button">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content%}
